@@ -30,8 +30,8 @@ async function main() {
 }
 
 function filterMessage(msg) {
-  var temperature = JSON.stringify(msg);
-  if (temperature > TEMP_THRESHOLD) {
+  var temperature = parseInt(JSON.stringify(msg));
+  if (temperature > parseInt(TEMP_THRESHOLD)) {
     console.log(`Temperature ${temperature} exceeds threshold ${TEMP_THRESHOLD}`);
     var alert = true;
     return alert;
